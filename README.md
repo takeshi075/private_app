@@ -28,15 +28,15 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |username|string|null: false|
-|gender|string|null: false|
-|profile|text|null: false|
-|image|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-
+|profile|text||
+|gender|integer|null: false|
+|image|string|null: false|
 ### Association
 - has_many :posts
 - has_many :comments
+
 
 ## postsテーブル
 |Column|Type|Options|
@@ -52,6 +52,7 @@ Things you may want to cover:
 - has_many :posts_tags
 - has_many  :tags,  through:  :posts_tags
 
+
 ## tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -59,6 +60,7 @@ Things you may want to cover:
 ### Association
 - has_many :posts_tags
 - has_many :posts,  through:  :posts_tags
+
 
 ## posts_tagsテーブル
 |Column|Type|Options|
@@ -69,13 +71,20 @@ Things you may want to cover:
 - belongs_to :post
 - belongs_to :tag
 
+
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|post_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
 - belongs_to :user
 
+
+# Gem(active_hashを使用)
+
+## gender
+- id
+- gender
