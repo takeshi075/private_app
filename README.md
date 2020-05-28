@@ -49,8 +49,8 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
+- has_many :posts_tags_relations
+- has_many  :tags,  through:  :posts_tags_relations
 
 
 ## tagsテーブル
@@ -58,11 +58,11 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|null: false|
 ### Association
-- has_many :posts_tags
-- has_many :posts,  through:  :posts_tags
+- has_many :posts_tags_relations
+- has_many :posts,  through:  :posts_tags_relations
 
 
-## posts_tagsテーブル
+## post_tag_relationsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |post_id|integer|null: false, foreign_key: true|
