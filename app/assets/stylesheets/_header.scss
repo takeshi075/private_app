@@ -1,0 +1,167 @@
+.wrapper {
+  .header {
+    height :210px;
+    position: relative;
+    background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+
+    &__top {
+      height:80px;
+      display: flex;
+
+      &__logo {
+        height: 100%;
+        width: 300px;
+        &__text {
+          height: 100%;
+          width: 100%;
+          padding-top: 20px;
+          padding-left: 10px;
+          position: relative;
+          font-weight: bold;
+          font-family: sans-serif;
+        }
+        .icon {
+          height: 80px;
+          width: 80px;
+          margin: -3px 90px;
+          position: absolute;
+          top: 0px;
+          left: 60px;
+        }
+      }
+    
+      &__serch {
+        height: 50px;
+        width: 100vw;
+        display: flex;
+        &__box {
+          height: 36px;
+          width: 900px;
+          margin: auto;
+          display: flex;
+          padding-top: 20px;
+          &__fream {
+            height: 38px;
+            width: 850px;
+            .login-input-text {
+              height: 38px;
+              width: 846px;
+            }
+          }
+          &__icon {
+            height: 42px;
+            width: 36px;
+            background-color:black;
+            .icon {
+              height: 26px;
+              width: 26px;
+              margin: 7px 7px;
+            }
+          }
+        }
+      }
+    }
+
+    &__profile {
+      height: 100px;
+      width: 248px;
+      padding-top: 20px;   
+        &__box {
+          height: 100%;
+          width: 100%;
+          a {
+            text-decoration: none;
+          }
+          &__inner {
+            height: 100px;
+            width: 100px;
+            margin-top: -15px;
+            padding-right: 190px;
+            li {
+              list-style: none;
+              margin-left: 10px;
+              color: black;
+            }
+            &__image {
+              height: 60px;
+              width: 100px;
+              .icon {
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+              }
+            }
+            &__name {
+              height: 30px;
+              width: 100px;
+              margin-top: 30px;
+              padding-left: 10px;
+              
+            }
+          }
+        }
+    }
+
+
+    &__contents {
+      display: flex;
+      position: absolute;
+      top: 80px;
+      left: 248px;
+      height: 120px;
+      width: 1192px; 
+
+      &__post {
+        height: 115px;
+        width: 115px;
+        margin-left: 145px;
+        margin-top: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        a {
+          text-decoration: none;
+        }
+        &__icon {
+          height: 50px;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: 180px;
+        }
+        &__btn {
+          height: 10px;
+          width: 100px;
+          margin-top: 85px;
+          margin-left: 25px;
+          color:black;
+        }
+      }
+
+      &__rm {
+        height: 115px;
+        width: 115px;
+        margin-left: 30px;
+        margin-top: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        a {
+          text-decoration: none;
+        }
+        &__icon {
+          height: 50px;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: 323px;
+        }
+        &__btn {
+          height: 10px;
+          width: 100px;
+          margin-top: 85px;
+          margin-left: 25px;
+          color:black;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.header
+  .header__top
+    .header__top__logo
+      .header__top__logo__text
+        トレーニング投稿
+        = image_tag "/icon/マッチョ.png",class:"icon"
+    .header__top__serch
+      .header__top__serch__box
+        .header__top__serch__box__fream
+          %input.login-input-text{ :placeholder => "キーワードから投稿を探す", :value => ""}/
+        .header__top__serch__box__icon
+          =image_tag "/icon/icon-search 1.png",class:"icon"
+  .header__profile
+    .header__profile__box
+      = link_to root_path do
+        .header__profile__box__inner
+          %li.header__profile__box__inner__image
+            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+          %li.header__profile__box__inner__name
+            いのっち
+  .header__contents
+    .header__contents__post
+      = link_to root_path do
+        = image_tag "/icon/edit_icon.png",class:"header__contents__post__icon"
+        .header__contents__post__btn 投稿する
+    .header__contents__rm
+      = link_to root_path do
+        = image_tag "/icon/calculate_icon.png",class:"header__contents__rm__icon"
+        .header__contents__rm__btn RM計算
