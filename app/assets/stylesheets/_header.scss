@@ -19,11 +19,16 @@
           position: relative;
           font-weight: bold;
           font-family: sans-serif;
+          margin-left: 40px;
+          font-weight: bold;
+          font-size: 1.3em;
+          color: orange;
         }
         .icon {
           height: 80px;
           width: 80px;
           margin: -3px 90px;
+          margin-left: 130px;
           position: absolute;
           top: 0px;
           left: 60px;
@@ -51,7 +56,7 @@
           &__icon {
             height: 42px;
             width: 36px;
-            background-color:black;
+            background-color: orange;
             .icon {
               height: 26px;
               width: 26px;
@@ -65,7 +70,8 @@
     &__profile {
       height: 100px;
       width: 248px;
-      padding-top: 20px;   
+      padding-top: 20px; 
+      margin-left: 40px;  
         &__box {
           height: 100%;
           width: 100%;
