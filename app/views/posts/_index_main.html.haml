@@ -25,18 +25,44 @@
             ベンチプレス50kg × 10回 × 3セット
             ベンチプレス50kg × 10回 × 3セット
             ベンチプレス50kg × 10回 × 3セット
-        .main__content__list__image
-          .main__content__list__image__title
-            画像
-          .main__content__list__image__detail
-            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-        .main__content__list__tag
-          .main__content__list__tag__title
-            タグ
-          .main__content__list__tag__detail
-            胸
-            腕
-            腹
+        .main__content__list__tagImage
+          .main__content__list__tagImage__tag
+            .main__content__list__tagImage__tag__title
+              タグ
+            .main__content__list__tagImage__tag__detail
+              胸
+              腕
+              腹
+          .main__content__list__tagImage__image
+            .main__content__list__tagImage__image__title
+              画像
+            .main__content__list__tagImage__image__detail
+              = image_tag "/icon/ニューヨーク.jpg",class:"icon"
         .main__content__list__coments
-
-
+          .hidden_box
+            %label{:for => "label1"} コメントを見る ( 1.クリック 2.スクロールして確認)
+            %input#label1{:type => "checkbox"}
+            .hidden_show
+              .hidden_show__coments
+                .hidden_show__coments__profile
+                  = link_to root_path do
+                    .hidden_show__coments__profile__image
+                      = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                    .hidden_show__coments__profile__name
+                      たけ
+                    .hidden_show__coments__profile__day
+                      2020年6月1日
+                .hidden_show__coments__box
+                  アイウエオ
+            .hidden_show
+              .hidden_show__coments
+                .hidden_show__coments__profile
+                  = link_to root_path do
+                    .hidden_show__coments__profile__image
+                      = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                    .hidden_show__coments__profile__name
+                      たけ
+                    .hidden_show__coments__profile__day
+                      2020年6月1日
+                .hidden_show__coments__box
+                  アイウエオ
