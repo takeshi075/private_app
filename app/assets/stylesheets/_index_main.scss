@@ -1,6 +1,7 @@
 .wrapper {
   height: 100Vh;
   width: 100VW;
+  background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
   .main {
     height: 1000px;
     width: 100VW;
@@ -16,7 +17,6 @@
         width: 400px;
         margin-top: 20px;
         margin-left: 40px;
-        background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
         position: relative;
         &__image {
           height: 100px;
@@ -108,57 +108,148 @@
           }
         }
 
-        &__image {
+        &__tagImage {
           height:300px;
           width:100%;
           border:solid 1px gray;
           background-color: black;
-          &__title {
-            height: 25px;
-            width: 180px;
-            margin-top: 10px;
-            margin-left: 10px;
-            font-weight: bold;
-            font-size: 1.1em;
-            color: orange;
+          display: flex;
+          &__tag {
+            height:300px;
+            width:50%;
+            border-right:solid 2px gray;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+            &__detail {
+              height:250px;
+              width: 600px;
+              margin-top: 5px;
+              margin-left: 10px;
+              line-height: 1.5;
+            }
           }
-          &__detail {
-            height:255px;
-            width: 400px;
-            margin: 0 auto;
-            background-color: red;
-            .icon {
-              height:100%;
-              width: 100%;
+          &__image {
+            height:300px;
+            width:50%;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+            &__detail {
+              height:255px;
+              width: 400px;
+              margin: 0 auto;
+              .icon {
+                height:100%;
+                width: 100%;
+              }
             }
           }
         }
 
-        &__tag {
-          height:40%;
+        &__coments {
+          height:75%;
           width:100%;
           color: white;
           border:solid 1px gray;
           background-color: black;
-          &__title {
-            height: 25px;
-            width: 180px;
-            margin-top: 10px;
-            margin-left: 10px;
-            font-weight: bold;
+          overflow: scroll;
+          .hidden_box {
+            height: 100%;
             font-size: 1.1em;
             color: orange;
-          }
-          &__detail {
-            height:85px;
-            width: 600px;
-            margin-top: 5px;
-            margin-left: 10px;
-            line-height: 1.5;
+            text-indent: 0.1in;
+            label {
+              font-weight: bold;
+              cursor: pointer;
+              text-indent: 0.1in;
+              padding-right: 100px;
+              &:hover {
+                color: #efefef;
+              }
+            }
+          
+            input {
+              display: none;
+            }
+          
+            .hidden_show {
+              height: 0;
+              padding: 0;
+              opacity: 0;
+              transition: 0.5s;
+              &__coments {
+                height:200px;
+                width:100%;
+                border:solid 1px gray;
+                background-color: black;
+                &__profile {
+                  height: 90px;
+                  width: 300px;
+                  margin-top: 10px;
+                  margin-left: 20px;
+                  position: relative;
+                  &__image {
+                    height: 100px;
+                    width: 100px;
+                    .icon {
+                      height: 80px;
+                      width: 80px;
+                      border-radius: 50%;
+                      margin-top: 5px;
+                    }
+                  }
+                  &__name {
+                    height: 30px;
+                    width: 100px;
+                    position: absolute;
+                    top: 10px;
+                    left: 100px;
+                    color: white;
+                  }
+                  &__day {
+                    height: 30px;
+                    width: 135px;
+                    position: absolute;
+                    top: 10px;
+                    left: 165px;
+                    color: white;
+                  }
+                }
+                
+                &__box {
+                  height: 80px;
+                  width: 600px;
+                  padding-top: 10px;
+                  margin-left: 10px;
+                  word-break: keep-all;
+                  line-height: 1.5;
+                  color: white;
+                }
+              }
+            }
+            input:checked ~ .hidden_show {
+              height: auto;
+              margin: auto;
+              opacity: 1;
+            }
+            
           }
         }
       }
-        
+
     }
   }
 }
