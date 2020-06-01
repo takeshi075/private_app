@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 2020_05_28_031507) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.text "title", null: false
+    t.text "memo", null: false
+    t.text "menu", null: false
     t.string "post_image"
-    t.text "text", null: false
     t.bigint "tag_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
