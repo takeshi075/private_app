@@ -1,0 +1,12 @@
+.wrapper
+  .main 
+    .main__post
+      .main__post__title 
+        .main__post__title__box
+          投 稿 画 面
+      .main__post__list
+        = form_with model: @post, local: true,class:"form" do |form|
+          = form.text_area :memo,placeholder: "一言メモ",autocomplete: 'off'
+          = form.text_field :menu,placeholder: "トレーニングメニュー"
+          = form.text_field :post_image 
+          = form.submit '投稿する' 
