@@ -88,3 +88,44 @@ Things you may want to cover:
 ## gender
 - id
 - gender
+
+<!-- post -->
+class CreatePosts < ActiveRecord::Migration[5.2]
+  def change
+    create_table :posts do |t|
+      t.text :memo , null: false
+      t.text :menu,null: false
+      t.string :post_image
+      t.references :tag, null: false,foreign_key: true
+      t.references :user, null: false,foreign_key: true
+      t.timestamps
+    end
+  end
+end
+
+<!-- user -->
+class CreateUsers < ActiveRecord::Migration[5.2]
+  def change
+    create_table :users do |t|
+      t.string  :username,null: false
+      t.string  :email,null: false
+      t.string  :password,null: false
+      t.text    :profile
+      t.string  :profile_image
+      t.timestamps
+    end
+  end
+end
+
+<!-- coment -->
+class CreateComments < ActiveRecord::Migration[5.2]
+  def change
+    create_table :comments do |t|
+      t.text :text
+      t.references :user, null: false,foreign_key: true
+      t.references :post, null: false,foreign_key: true
+      t.timestamps
+    end
+  end
+end
+
