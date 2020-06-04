@@ -27,67 +27,82 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|profile|text||
-|gender|integer|null: false|
-|image|string|null: false|
 ### Association
 - has_many :posts
 - has_many :comments
+- has_many :menus
+- belongs_to :profile
 
+
+## profileテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|introduction|null: false|
+|image|string|
+|user_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :user
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
+|memo|text|null: false|
 |image|string|
-|tag_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|menu_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - has_many :comments
-- has_many :posts_tags_relations
-- has_many  :tags,  through:  :posts_tags_relations
+- has_many :menus
 
 
-## tagsテーブル
+## posts_menusテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :posts_tags_relations
-- has_many :posts,  through:  :posts_tags_relations
-
-
-## post_tag_relationsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
+|menu_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
-- belongs_to :tag
+- belongs_to :menu
+
+
+## menus_countsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|menu_id|references|null: false, foreign_key: true|
+|count_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :menu
+- belongs_to :count
 
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|post_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|post_id|references|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
 - belongs_to :user
 
 
+
 # Gem(active_hashを使用)
 
-## gender
+## menus
 - id
-- gender
+- menu
+
+## counts
+- id
+- count
+
+
+
 
 <!-- post -->
 class CreatePosts < ActiveRecord::Migration[5.2]
@@ -129,3 +144,20 @@ class CreateComments < ActiveRecord::Migration[5.2]
   end
 end
 
+## tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+### Association
+- has_many :posts_tags_relations
+- has_many :posts,  through:  :posts_tags_relations
+
+
+## post_tag_relationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|references|null: false, foreign_key: true|
+|tag_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :post
+- belongs_to :tag
