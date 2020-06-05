@@ -31,10 +31,9 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :posts
-- has_many :comments
-- has_many :menus
-- belongs_to :profile
+- has_many :posts,dependent: :destroy
+- has_many :comments,dependent: :destroy
+- has_one :profile, dependent: :destroy
 
 
 ## profileテーブル
@@ -46,37 +45,32 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 
+
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |memo|text|null: false|
 |image|string|
-|menu_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
 - has_many :menus
+- has_many :comments
 
 
-## posts_menusテーブル
+## menusテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_id|references|null: false, foreign_key: true|
-|menu_id|references|null: false, foreign_key: true|
+|menu|string|null: false|
+|weight_id|string|null: false|
+|repetition_id|string|null: false|
+|setcount_id|string|null: false|
+|post_id|string|null: false|
 ### Association
 - belongs_to :post
-- belongs_to :menu
-
-
-## menus_countsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|menu_id|references|null: false, foreign_key: true|
-|count_id|references|null: false, foreign_key: true|
-### Association
-- belongs_to :menu
-- belongs_to :count
+- belongs_to :repetition
+- belongs_to :weight
+- belongs_to :setcount
 
 
 ## commentsテーブル
@@ -93,13 +87,17 @@ Things you may want to cover:
 
 # Gem(active_hashを使用)
 
-## menus
+## weights
 - id
-- menu
+- weight
 
-## counts
+## repetitions
 - id
-- count
+- repetition
+
+## setcounts
+- id
+- setcount
 
 
 
