@@ -10,10 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_04_123534) do
+ActiveRecord::Schema.define(version: 2020_06_05_063019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coments", force: :cascade do |t|
+    t.text "text", null: false
+    t.bigint "post_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_coments_on_post_id"
+    t.index ["user_id"], name: "index_coments_on_user_id"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string "menu", null: false
+    t.string "weight_id", null: false
+    t.string "repetition_id", null: false
+    t.string "set_count_id", null: false
+    t.bigint "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_menus_on_post_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text "memo", null: false
+    t.string "image"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.text "introduction", null: false
@@ -37,5 +67,9 @@ ActiveRecord::Schema.define(version: 2020_06_04_123534) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "coments", "posts"
+  add_foreign_key "coments", "users"
+  add_foreign_key "menus", "posts"
+  add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
 end
