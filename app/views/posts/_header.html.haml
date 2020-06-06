@@ -11,13 +11,18 @@
         .header__top__serch__box__icon
           =image_tag "/icon/icon-search 1.png",class:"icon"
   .header__profile
-    .header__profile__box
-      = link_to root_path do
-        .header__profile__box__inner
-          %li.header__profile__box__inner__image
-            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-          %li.header__profile__box__inner__name
-            いのっち
+    - if user_signed_in?
+      .header__profile__box
+        = link_to root_path do
+          .header__profile__box__inner
+            %li.header__profile__box__inner__image
+              = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+            %li.header__profile__box__inner__name
+              いのっち
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+    - else
+      = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+      = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
   .header__contents
     .header__contents__post
       = link_to new_post_path do
