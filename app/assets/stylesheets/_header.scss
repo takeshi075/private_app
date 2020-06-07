@@ -108,6 +108,22 @@
             }
           }
         }
+        .header__right--outbtn {
+          margin-left: 147px;
+          position: relative;
+          top: 10px;
+          text-decoration: none;
+          color: black;
+        }
+        .header__right--inbtn {
+          position: relative;
+          top: 70px;
+          text-decoration: none;
+          color: black;
+        }
+        a:hover {
+          color: orange;
+        }
     }
 
 
