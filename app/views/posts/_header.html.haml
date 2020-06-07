@@ -18,11 +18,11 @@
             %li.header__profile__box__inner__image
               = image_tag "/icon/ニューヨーク.jpg",class:"icon"
             %li.header__profile__box__inner__name
-              いのっち
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+              = current_user.name
+      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--outbtn"
     - else
-      = link_to "ログイン", new_user_session_path, class: "header__right--btn"
-      = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+      = link_to "ログイン", new_user_session_path, class: "header__right--inbtn"
+      = link_to "新規登録", new_user_registration_path, class: "header__right--inbtn"
   .header__contents
     .header__contents__post
       = link_to new_post_path do
