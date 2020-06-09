@@ -15,6 +15,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:memo, :menu, :post_image)
+    params.require(:post).permit(:memo, :image,:menu,:weight,:repetition,:set_count)
   end
 end
