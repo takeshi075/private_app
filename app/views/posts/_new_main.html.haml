@@ -5,8 +5,15 @@
         .main__post__title__box
           投 稿 画 面
       .main__post__list
-        = form_with model: @post, local: true,class:"form" do |form|
-          = form.text_area :memo,placeholder: "一言メモ",autocomplete: 'off'
-          = form.text_field :menu,placeholder: "トレーニングメニュー"
-          = form.text_field :post_image 
-          = form.submit '投稿する' 
+        = form_with model: @post, local: true,class:"form" do |f|
+          = f.text_area :memo,placeholder: "一言メモ",autocomplete: 'off'
+          = f.text_area :menu,placeholder: "トレーニングメニュー",autocomplete: 'off'
+          = f.collection_select :weight_id, Weight.all, :id, :weight,placeholder: "選択して下さい"
+          = f.collection_select :Repetition_id, Repetition.all, :id, :Repetition,placeholder: "選択して下さい"
+          = f.collection_select :set_count_id, SetCount.all, :id, :set_count,placeholder: "選択して下さい"
+          = f.label :image,class:"main__post__list__image" do
+            = icon("far","image")
+            = f.file_field :image,class:"main__post__list__image__a"
+          = f.submit '投稿する' 
+
+          

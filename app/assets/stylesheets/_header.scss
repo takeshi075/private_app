@@ -13,6 +13,7 @@
       &__logo {
         height: 100%;
         width: 300px;
+
         &__text {
           height: 100%;
           width: 100%;
@@ -22,9 +23,12 @@
           font-weight: bold;
           font-family: sans-serif;
           margin-left: 40px;
-          font-weight: bold;
-          font-size: 1.3em;
-          color: orange;
+          a {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: orange;
+            text-decoration: none;
+          }
         }
         .icon {
           height: 80px;
