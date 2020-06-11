@@ -25,19 +25,12 @@ ActiveRecord::Schema.define(version: 2020_06_05_063019) do
     t.index ["user_id"], name: "index_coments_on_user_id"
   end
 
-  create_table "menus", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
+    t.text "memo", null: false
     t.string "menu", null: false
     t.string "weight_id", null: false
     t.string "repetition_id", null: false
     t.string "set_count_id", null: false
-    t.bigint "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_menus_on_post_id"
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.text "memo", null: false
     t.string "image"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -69,7 +62,6 @@ ActiveRecord::Schema.define(version: 2020_06_05_063019) do
 
   add_foreign_key "coments", "posts"
   add_foreign_key "coments", "users"
-  add_foreign_key "menus", "posts"
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
 end
