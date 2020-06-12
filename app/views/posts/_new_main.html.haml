@@ -7,13 +7,17 @@
       .main__post__list
         = form_with model: @post, local: true,class:"form" do |f|
           = f.text_area :memo,placeholder: "一言メモ",autocomplete: 'off'
-          = f.text_area :menu,placeholder: "トレーニングメニュー",autocomplete: 'off'
-          = f.collection_select :weight_id, Weight.all, :id, :weight,placeholder: "選択して下さい"
-          = f.collection_select :Repetition_id, Repetition.all, :id, :Repetition,placeholder: "選択して下さい"
-          = f.collection_select :set_count_id, SetCount.all, :id, :set_count,placeholder: "選択して下さい"
           = f.label :image,class:"main__post__list__image" do
             = icon("far","image")
             = f.file_field :image,class:"main__post__list__image__a"
-          = f.submit '投稿する' 
-
+          = f.fields_for @menu do |i| 
+            = f.text_area :menu,placeholder: "トレーニングメニュー",autocomplete: 'off'
+            = f.collection_select :weight_id, Weight.all, :id, :weight,placeholder: "選択して下さい"
+            = f.collection_select :repetition_id, Repetition.all, :id, :repetition,placeholder: "選択して下さい"
+            = f.collection_select :set_count_id, SetCount.all, :id, :set_count,placeholder: "選択して下さい"
+            = f.text_area :menu,placeholder: "トレーニングメニュー",autocomplete: 'off'
+            = f.collection_select :weight_id, Weight.all, :id, :weight,placeholder: "選択して下さい"
+            = f.collection_select :repetition_id, Repetition.all, :id, :repetition,placeholder: "選択して下さい"
+            = f.collection_select :set_count_id, SetCount.all, :id, :set_count,placeholder: "選択して下さい"
           
+          = f.submit '投稿する' 
