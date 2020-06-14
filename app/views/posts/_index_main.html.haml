@@ -1,61 +1,67 @@
 .wrapper
-  .main 
-    .main__content
-      .main__content__profile 
-        = link_to root_path do
-          .main__content__profile__image
-            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-          .main__content__profile__list
-            .main__content__profile__list__name
-              いのっち
-            .main__content__profile__list__day
-              2020年5月30日
-      .main__content__list
-        .main__content__list__text
-          .main__content__list__text__title
-            一言メモ
-          .main__content__list__text__detail
-            追い込んだ。
-            やり切った。
-            明日も頑張る
-        .main__content__list__menuImage
-          .main__content__list__menuImage__menu
-            .main__content__list__menuImage__menu__title
-              トレーニングメニュー
-            .main__content__list__menuImage__menu__detail
-              ベンチプレス50kg × 10回 × 3セット
-              ベンチプレス50kg × 10回 × 3セット
-              ベンチプレス50kg × 10回 × 3セット
-          .main__content__list__menuImage__image
-            .main__content__list__menuImage__image__title
-              画像
-            .main__content__list__menuImage__image__detail
+  - @posts.each do |post|
+    .main 
+      .main__content
+        .main__content__profile 
+          = link_to root_path do
+            .main__content__profile__image
               = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-        .main__content__list__coments
-          .hidden_box
-            %label{:for => "label1"} コメントを見る ( 1.クリック 2.スクロールして確認)
-            %input#label1{:type => "checkbox"}
-            .hidden_show
-              .hidden_show__coments
-                .hidden_show__coments__profile
-                  = link_to root_path do
-                    .hidden_show__coments__profile__image
-                      = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-                    .hidden_show__coments__profile__name
-                      たけ
-                    .hidden_show__coments__profile__day
-                      2020年6月1日
-                .hidden_show__coments__box
-                  アイウエオ
-            .hidden_show
-              .hidden_show__coments
-                .hidden_show__coments__profile
-                  = link_to root_path do
-                    .hidden_show__coments__profile__image
-                      = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-                    .hidden_show__coments__profile__name
-                      たけ
-                    .hidden_show__coments__profile__day
-                      2020年6月1日
-                .hidden_show__coments__box
-                  アイウエオ
+            .main__content__profile__list
+              .main__content__profile__list__name
+                = post.user.name
+              .main__content__profile__list__day
+                = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        .main__content__list
+          .main__content__list__text
+            .main__content__list__text__title
+              一言メモ
+            .main__content__list__text__detail
+              = post.memo
+          .main__content__list__menuImage
+            .main__content__list__menuImage__menu
+              .main__content__list__menuImage__menu__title
+                トレーニングメニュー
+              .main__content__list__menuImage__menu__detail
+                .main__content__list__menuImage__menu__detail__1
+                  = post.menu1
+                .main__content__list__menuImage__menu__detail__1
+                  = post.menu2
+                .main__content__list__menuImage__menu__detail__1
+                  = post.menu3
+                .main__content__list__menuImage__menu__detail__1
+                  = post.menu4
+                .main__content__list__menuImage__menu__detail__1
+                  = post.menu5
+            .main__content__list__menuImage__image
+              .main__content__list__menuImage__image__title
+                画像
+              .main__content__list__menuImage__image__detail
+                = image_tag post.image.url
+          .main__content__list__coments
+            .hidden_box
+              %label{:for => "label1"} コメントを見る ( 1.クリック 2.スクロールして確認)
+              %input#label1{:type => "checkbox"}
+              .hidden_show
+                .hidden_show__coments
+                  .hidden_show__coments__profile
+                    = link_to root_path do
+                      .hidden_show__coments__profile__image
+                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                      .hidden_show__coments__profile__name
+                        たけ
+                      .hidden_show__coments__profile__day
+                        2020年6月1日
+                  .hidden_show__coments__box
+                    アイウエオ
+              .hidden_show
+                .hidden_show__coments
+                  .hidden_show__coments__profile
+                    = link_to root_path do
+                      .hidden_show__coments__profile__image
+                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                      .hidden_show__coments__profile__name
+                        たけ
+                      .hidden_show__coments__profile__day
+                        2020年6月1日
+                  .hidden_show__coments__box
+                    アイウエオ
