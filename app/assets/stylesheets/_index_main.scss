@@ -34,7 +34,7 @@
         }
         &__list {
           height: 30px;
-          width: 300px;
+          width: 400px;
           position: absolute;
           display: flex;
           top: 10px;
@@ -46,7 +46,7 @@
           }
           &__day {
             height: 30px;
-            width: 200px;
+            width: 300px;
             color: black;
           }
         }
@@ -78,7 +78,7 @@
             height:85px;
             width: 600px;
             margin-top: 5px;
-            margin-left: 10px;
+            margin-left: 29px;
             word-break: keep-all;
             line-height: 1.5;
             
@@ -94,6 +94,7 @@
           &__menu {
             height:350px;
             width:50%;
+            overflow: scroll;
             border-right:solid 2px gray;
             &__title {
               height: 25px;
@@ -107,9 +108,16 @@
             &__detail {
               height:250px;
               width: 600px;
-              margin-top: 5px;
+              margin-top: 15px;
               margin-left: 10px;
               line-height: 1.5;
+              &__1 {
+                height:50px;
+                width: 500px;
+                margin-left: 20px;
+                color: white;
+              }
+
             }
           }
           &__image {
@@ -125,10 +133,10 @@
               color: orange;
             }
             &__detail {
-              height:255px;
+              height:300px;
               width: 400px;
               margin: 0 auto;
-              .icon {
+              img {
                 height:100%;
                 width: 100%;
               }

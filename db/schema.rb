@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_12_132001) do
+ActiveRecord::Schema.define(version: 2020_06_05_063019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,30 +25,13 @@ ActiveRecord::Schema.define(version: 2020_06_12_132001) do
     t.index ["user_id"], name: "index_coments_on_user_id"
   end
 
-  create_table "menu1s", force: :cascade do |t|
-    t.string "menu", null: false
-    t.string "weight_id", null: false
-    t.string "repetition_id", null: false
-    t.string "set_count_id", null: false
-    t.bigint "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_menu1s_on_post_id"
-  end
-
-  create_table "menu2s", force: :cascade do |t|
-    t.string "menu", null: false
-    t.string "weight_id", null: false
-    t.string "repetition_id", null: false
-    t.string "set_count_id", null: false
-    t.bigint "post_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_menu2s_on_post_id"
-  end
-
   create_table "posts", force: :cascade do |t|
     t.text "memo", null: false
+    t.text "menu1", null: false
+    t.text "menu2"
+    t.text "menu3"
+    t.text "menu4"
+    t.text "menu5"
     t.string "image"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -80,8 +63,6 @@ ActiveRecord::Schema.define(version: 2020_06_12_132001) do
 
   add_foreign_key "coments", "posts"
   add_foreign_key "coments", "users"
-  add_foreign_key "menu1s", "posts"
-  add_foreign_key "menu2s", "posts"
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
 end
