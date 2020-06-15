@@ -35,11 +35,67 @@
       }
 
       &__list {
-        height: 500px;
-        width: 1152px;
+        height: 800px;
+        width: 80%;
         margin: auto;
-        background-color: red;
-        
+        background-color: black;
+        &__box1 {
+          height: 140px;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 15px;
+          border:solid 1px gray;
+          background-color: red;
+          .form1 {
+            height:40%;
+            width:100%;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+            textarea {
+              height:85px;
+              width: 600px;
+              margin-top: 5px;
+              margin-left: 29px;
+              word-break: keep-all;
+              line-height: 1.5;
+            }
+          }
+        }
+        &__box2 {
+          height: 140px;
+          width: 100%;
+          margin: 0 auto;
+          border:solid 1px gray;
+          background-color: red;
+          .form2 {
+            height:40%;
+            width:100%;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+            textarea {
+              height:55px;
+              width: 600px;
+              margin-top: 5px;
+              margin-left: 29px;
+              word-break: keep-all;
+              line-height: 1.5;
+            }
+          }
+        }
       }
 
     }
