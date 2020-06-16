@@ -35,7 +35,7 @@
       }
 
       &__list {
-        height: 800px;
+        height: 620px;
         width: 80%;
         margin: auto;
         background-color: black;
@@ -45,7 +45,6 @@
           margin: 0 auto;
           margin-top: 15px;
           border:solid 1px gray;
-          background-color: red;
           .form1 {
             height:40%;
             width:100%;
@@ -69,14 +68,13 @@
           }
         }
         &__box2 {
-          height: 140px;
+          height: 400px;
           width: 100%;
           margin: 0 auto;
           border:solid 1px gray;
-          background-color: red;
           .form2 {
             height:40%;
-            width:100%;
+            width:50%;
             &__title {
               height: 25px;
               width: 180px;
@@ -93,6 +91,36 @@
               margin-left: 29px;
               word-break: keep-all;
               line-height: 1.5;
+            }
+          }
+          .form3 {
+            height:100%;
+            width:41%;
+            position: relative;
+            top: -178px;
+            left: 675px;
+            border-left:solid 2px gray;
+            border-right: none;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+          }
+        }
+        &__submit {
+          .form4 {
+            input {
+              height: 50px;
+              width: 400px;
+              position: relative;
+              top: 15px;
+              left: 350px;
+              background-color: orange;
             }
           }
         }
