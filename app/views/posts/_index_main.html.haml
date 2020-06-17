@@ -2,15 +2,14 @@
   - @posts.each do |post|
     .main 
       .main__content
-        .main__content__profile 
-          = link_to root_path do
-            .main__content__profile__image
-              = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-            .main__content__profile__list
-              .main__content__profile__list__name
-                = post.user.name
-              .main__content__profile__list__day
-                = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+        = link_to user_path(post.user), class:"main__content__profile" do
+          .main__content__profile__image
+            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+          .main__content__profile__list
+            .main__content__profile__list__name
+              = post.user.name
+            .main__content__profile__list__day
+              = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
         .main__content__list
           .main__content__list__text
             .main__content__list__text__title

@@ -14,12 +14,11 @@
   .header__profile
     - if user_signed_in?
       .header__profile__box
-        = link_to root_path do
-          .header__profile__box__inner
-            %li.header__profile__box__inner__image
-              = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-            %li.header__profile__box__inner__name
-              = current_user.name
+        = link_to user_path(current_user), class:"header__profile__box__inner" do
+          %li.header__profile__box__inner__image
+            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+          %li.header__profile__box__inner__name
+            = current_user.name
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--outbtn"
     - else
       = link_to "ログイン", new_user_session_path, class: "header__right--inbtn"
