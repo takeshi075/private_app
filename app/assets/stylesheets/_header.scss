@@ -79,8 +79,7 @@
       padding-top: 20px; 
       margin-left: 40px;  
         &__box {
-          height: 100%;
-          width: 100%;
+          width: 100px;
           a {
             text-decoration: none;
           }
@@ -92,7 +91,9 @@
             li {
               list-style: none;
               margin-left: 10px;
+              position: relative;
               color: black;
+              top: -16px;
             }
             &__image {
               height: 60px;
@@ -115,7 +116,7 @@
         .header__right--outbtn {
           margin-left: 147px;
           position: relative;
-          top: 10px;
+          top: -69px;
           text-decoration: none;
           color: black;
         }
