@@ -32,6 +32,7 @@ ja:
         phonenumber: 電話番号
     models:
       user: "ユーザー"
+      name: "ニックネーム"
   devise:
     confirmations:
       new:
