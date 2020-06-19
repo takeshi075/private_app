@@ -4,7 +4,10 @@
       .main__content
         = link_to user_path(post.user), class:"main__content__profile" do
           .main__content__profile__image
-            = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+            - if post.user.image?
+              = image_tag post.user.image.url,class:"icon"
+            - else
+              = image_tag "/icon/noimage1.svg",class:"icon"
           .main__content__profile__list
             .main__content__profile__list__name
               = post.user.name
