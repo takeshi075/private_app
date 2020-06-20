@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100Vh;
+  width: 100VW;
+  background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+  &__session {
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    &__title {
+    height: 35px;
+    width: 200px;
+    margin: auto;
+    position: relative;
+    background-color:black;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: orange;
+    text-align: center;
+    .icon {
+      height: 80px;
+      width: 80px;
+      margin: -3px 90px;
+      margin-left: 130px;
+      position: absolute;
+      top: -22px;
+      left: 85px;
+
+    }
+    }
+
+  }
+
+  &__main {
+    .edit_user {
+      height: 650px;
+      width: 500px;
+      margin: auto;
+      background-color:#f8f8f8;
+      overflow: scroll;
+      .box {
+        height: 80px;
+        width: 400px;
+        display: flex;
+        margin: auto;
+        &__title {
+          height: 35px;
+          width: 140px;
+          margin: auto;
+          font-weight: bold;
+          font-size: 1.3em;
+          text-align: center;
+        }
+      }
+      .field {
+        height: 100px;
+        width: 400px;
+        &__box {
+          height: 100px;
+          width: 400px;
+          margin-left: 50px;
+          margin-top: 10px;
+        }
+        &__image {
+          height: 100px;
+          width: 400px;
+          margin-left: 50px;
+          margin-top: 55px;
+        }
+        label {
+          font-size: 1.3em;
+        }
+        input {
+          height: 50px;
+          width: 400px;
+          border-radius: 4px;
+        }
+        .introduction {
+          height: 100px;
+          width: 400px;
+          border-radius: 4px;
+        }
+        &__box {
+          .actions {
+            input {
+              background-color: orange;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

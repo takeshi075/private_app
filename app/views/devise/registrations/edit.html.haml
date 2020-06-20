@@ -1,45 +1,61 @@
-%h2
-  Edit #{resource_name.to_s.humanize}
-= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-  = f.label :ニックネーム
-  %br/
-  = f.text_field :name, autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-  = f.label :プロフィール
-  %br/
-  = f.text_field :introduction
-  .field
-  = f.label :プロフィール画像
-  %br/
-  = f.file_field :image
-  - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-    %div
-      Currently waiting confirmation for: #{resource.unconfirmed_email}
-  .field
-    = f.label :password
-    %i (変更しない場合は現在のパスワードを入力してください)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-    - if @minimum_password_length
-      %br/
-      %em
-        = @minimum_password_length
-        文字以上
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :current_password
-    %i (現在のパスワードを入力して下さい)
-    %br/
-    = f.password_field :current_password, autocomplete: "current-password"
-  .actions
-    = f.submit "Update"
-= link_to "Back", :back
+.wrapper 
+  %h2.wrapper__session 
+    .wrapper__session__title
+      トレーニング投稿
+      = image_tag "/icon/マッチョ.png",class:"icon"
+  .wrapper__main
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .box
+        .box__title
+          ユーザー編集
+      .field
+        .field__box
+          = f.label :ニックネーム
+          %br/
+          = f.text_field :name, autofocus: true
+      .field
+        .field__box
+          = f.label :email
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        .field__box
+          = f.label :プロフィール
+          %br/
+          = f.text_area :introduction,class:"introduction"
+      .field
+        .field__image
+          = f.label :プロフィール画像
+          %br/
+          = f.file_field :image
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            %div
+              Currently waiting confirmation for: #{resource.unconfirmed_email}
+      .field
+        .field__box
+          = f.label :新しいパスワード
+          (6文字以上)
+          (変更しない場合は現在のパスワードを入力してください)
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+          -# - if @minimum_password_length
+          -#   %br/
+          -#   %em
+          -#     = @minimum_password_length
+          -#     文字以上
+      .field
+        .field__box
+          = f.label :password_confirmation 
+          (変更しない場合は現在のパスワードを入力してください)
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+      .field
+        .field__box
+          = f.label :current_password
+          %br/
+          = f.password_field :current_password, autocomplete: "current-password"
+        .field__box
+          .actions
+            = f.submit "更新する"
+        = link_to "ユーザーページに戻る", :back

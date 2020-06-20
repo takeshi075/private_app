@@ -16,20 +16,22 @@
       width: 100vw;
 
       &__title {
-        height: 50px;
-        width: 150px;
-        margin: 0 auto;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        height: 38px;
+        width: 200px;
+        margin: auto;
         background-color: black;
+        color: orange;
+        font-weight: bold;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 5px 0px;
+        margin-top: 42px;
         &__box {
-          height: 30px;
-          width: 110px;
-          padding-top: 7px;
           font-family: sans-serif;
           font-weight: bold;
-          font-size: 1.3em;
+          font-size: 1.1em;
           margin: 0 auto;
+          margin-top: -3px;
           color: orange;
         }
       }
