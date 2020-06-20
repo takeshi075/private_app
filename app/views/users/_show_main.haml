@@ -1,0 +1,15 @@
+.wrapper__user
+  .box
+    .box__title
+      ユーザー詳細
+  .content
+    .content__imageuser
+      .content__image
+        - if @user.image?
+          = image_tag @user.image.url,class:"icon"
+        - else
+          = image_tag "/icon/noimage1.svg",class:"icon"
+      ユーザー名
+      = @user.name
+    プロフィール
+    = link_to "トップページに戻る", :back

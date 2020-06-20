@@ -16,7 +16,7 @@
 
         &__text {
           height: 100%;
-          width: 100%;
+          width: 200px;
           padding-top: 20px;
           padding-left: 10px;
           position: relative;
@@ -47,22 +47,23 @@
         display: flex;
         &__box {
           height: 36px;
-          width: 900px;
           margin: auto;
           display: flex;
           padding-top: 20px;
           &__fream {
-            height: 38px;
-            width: 850px;
             .login-input-text {
               height: 38px;
-              width: 846px;
+              width: 500px;
+              position: absolute;
+              left: 400px;
             }
           }
           &__icon {
-            height: 42px;
+            height: 38px;
             width: 36px;
             background-color: orange;
+            position: absolute;
+            left: 902px;
             .icon {
               height: 26px;
               width: 26px;
@@ -133,7 +134,6 @@
       top: 80px;
       left: 248px;
       height: 120px;
-      width: 100vw; 
 
       &__post {
         height: 115px;

@@ -4,7 +4,7 @@
     .main__post
       .main__post__title 
         .main__post__title__box
-          投 稿 画 面
+          投稿 
       .main__post__list
         = form_with model: @post, local: true,class:"form" do |f|
           .main__post__list__box1
@@ -16,11 +16,11 @@
             .form2
               .form2__title
                 トレーニングメニュー
-                = f.text_area :menu1,placeholder: "トレーニングメニュー① (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
-                = f.text_area :menu2,placeholder: "トレーニングメニュー② (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
-                = f.text_area :menu3,placeholder: "トレーニングメニュー③ (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
-                = f.text_area :menu4,placeholder: "トレーニングメニュー④ (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
-                = f.text_area :menu5,placeholder: "トレーニングメニュー⑤( 例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
+                = f.text_area :menu1,placeholder: "トレーニングメニュー①                        (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
+                = f.text_area :menu2,placeholder: "トレーニングメニュー②                        (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
+                = f.text_area :menu3,placeholder: "トレーニングメニュー③                        (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
+                = f.text_area :menu4,placeholder: "トレーニングメニュー④                        (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
+                = f.text_area :menu5,placeholder: "トレーニングメニュー⑤                        (例：ベンチプレス80kg × 10回 × 3セット)",autocomplete: 'off'
             .form3
               .form3__title    
                 = f.label :image,class:"main__post__list__image" do
