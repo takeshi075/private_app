@@ -1,8 +1,9 @@
 .wrapper 
   %h2.wrapper__session 
     .wrapper__session__title
-      トレーニング投稿
-      = image_tag "/icon/マッチョ.png",class:"icon"
+      = link_to root_path do
+        トレーニング投稿
+        = image_tag "/icon/マッチョ.png",class:"icon"
   .wrapper__main
     = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
       = render "devise/shared/error_messages", resource: resource
@@ -58,4 +59,3 @@
         .field__box
           .actions
             = f.submit "更新する"
-        = link_to "ユーザーページに戻る", :back

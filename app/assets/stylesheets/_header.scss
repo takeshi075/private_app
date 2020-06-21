@@ -186,6 +186,41 @@
           color:black;
         }
       }
+      &__user {
+        height: 115px;
+        width: 115px;
+        margin-left: 30px;
+        margin-top: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        a {
+          text-decoration: none;
+        }
+        &__icon {
+          height: 50px;
+          width: 50px;
+          position: absolute;
+          top: 20px;
+          left: 467px;
+        }
+        &__btn {
+          height: 10px;
+          width: 64px;
+          margin-top: 63px;
+          margin-left: 33px;
+          color:black;
+          &__a {
+            height:22px;
+            width: 66px;
+            padding-top: 3px;
+          }
+          &__b {
+            height: 26px;
+            width: 34px;
+            margin-left: 8px;
+          }
+        }
+      }
     }
   }
 }

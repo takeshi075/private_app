@@ -4,6 +4,7 @@
   background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
   &__user {
     border-top:solid 8px orange;
+    background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
     .box {
       height: 80px;
       width: 400px;
@@ -23,11 +24,267 @@
       }
     }
     .content {
-      height: 300px;
+      height: 200px;
       width: 80%;
       margin: auto;
       margin-top: 15px;
+      margin-bottom: 30px;
       background-color: black;
+      &__image {
+        .icon {
+          height: 115px;
+          width: 115px;
+          margin-left: 30px;
+          margin-top: 20px;
+          border-radius: 50%;
+          background-color: #fff;
+        }
+      }
+      &__name {
+        height: 24px;
+        width: 115px;
+        color: white;
+        margin-top: 5px;
+        margin-left: 47px;
+      }
+      &__introduction {
+        height: 150px;
+        width: 560px;
+        position: relative;
+        left: 200px;
+        top: -146px;
+        color: white;
+        &__title {
+          height: 23px;
+          width: 108px;
+          font-weight: bold;
+          font-size: 1.1em;
+          color: orange;
+        }
+        &__main {
+          height: 81%;
+          margin-top: 5px;
+          margin-left: 17px;
+        }
+      }
+    }
+
+    .usermain {
+      height: 950px;
+      width: 100VW;
+      background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+      border-top:solid 8px orange;
+      border-bottom:solid 8px orange;
+      &__content {
+        height: 500px;
+        width: 100vw;
+        &__profile {
+          height: 100px;
+          width: 400px;
+          margin-top: 20px;
+          margin-left: 40px;
+          position: relative;
+          &__list {
+            height: 30px;
+            width: 400px;
+            position: absolute;
+            display: flex;
+            top: 26px;
+            left: 115px;
+            &__day {
+              height: 30px;
+              width: 300px;
+              color: black;
+            }
+            a:hover {
+              color: orange;
+            }
+          }
+        }
+  
+        &__list {
+          height: 350px;
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 15px;
+          background-color: black;
+  
+          &__text {
+            height:40%;
+            width:100%;
+            color: white;
+            border:solid 1px gray;
+            background-color: black;
+            &__title {
+              height: 25px;
+              width: 180px;
+              margin-top: 10px;
+              margin-left: 10px;
+              font-weight: bold;
+              font-size: 1.1em;
+              color: orange;
+            }
+            &__detail {
+              height:85px;
+              width: 600px;
+              margin-top: 5px;
+              margin-left: 29px;
+              word-break: keep-all;
+              line-height: 1.5;
+              
+            }
+          }
+  
+          &__menuImage {
+            height:350px;
+            width:100%;
+            border:solid 1px gray;
+            background-color: black;
+            display: flex;
+            &__menu {
+              height:350px;
+              width:50%;
+              overflow: scroll;
+              border-right:solid 2px gray;
+              &__title {
+                height: 25px;
+                width: 180px;
+                margin-top: 10px;
+                margin-left: 10px;
+                font-weight: bold;
+                font-size: 1.1em;
+                color: orange;
+              }
+              &__detail {
+                height:250px;
+                width: 600px;
+                margin-top: 15px;
+                margin-left: 10px;
+                line-height: 1.5;
+                &__1 {
+                  height:50px;
+                  width: 500px;
+                  margin-left: 20px;
+                  color: white;
+                }
+  
+              }
+            }
+            &__image {
+              height:300px;
+              width:50%;
+              &__title {
+                height: 25px;
+                width: 180px;
+                margin-top: 10px;
+                margin-left: 10px;
+                font-weight: bold;
+                font-size: 1.1em;
+                color: orange;
+              }
+              &__detail {
+                height:300px;
+                width: 300px;
+                margin: 0 auto;
+                img {
+                  height:100%;
+                  width: 100%;
+                }
+              }
+            }
+          }
+  
+          &__coments {
+            height:75%;
+            width:100%;
+            color: white;
+            border:solid 1px gray;
+            background-color: black;
+            overflow: scroll;
+            .hidden_box {
+              height: 100%;
+              font-size: 1.1em;
+              color: orange;
+              text-indent: 0.1in;
+              label {
+                font-weight: bold;
+                cursor: pointer;
+                text-indent: 0.1in;
+                padding-right: 100px;
+                &:hover {
+                  color: #efefef;
+                }
+              }
+            
+              input {
+                display: none;
+              }
+            
+              .hidden_show {
+                height: 0;
+                padding: 0;
+                opacity: 0;
+                transition: 0.5s;
+                &__coments {
+                  height:200px;
+                  width:100%;
+                  border:solid 1px gray;
+                  background-color: black;
+                  &__profile {
+                    height: 90px;
+                    width: 300px;
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    position: relative;
+                    &__image {
+                      height: 100px;
+                      width: 100px;
+                      .icon {
+                        height: 80px;
+                        width: 80px;
+                        border-radius: 50%;
+                        margin-top: 5px;
+                      }
+                    }
+                    &__name {
+                      height: 30px;
+                      width: 100px;
+                      position: absolute;
+                      top: 10px;
+                      left: 100px;
+                      color: white;
+                    }
+                    &__day {
+                      height: 30px;
+                      width: 135px;
+                      position: absolute;
+                      top: 10px;
+                      left: 165px;
+                      color: white;
+                    }
+                  }
+                  
+                  &__box {
+                    height: 80px;
+                    width: 600px;
+                    padding-top: 10px;
+                    margin-left: 10px;
+                    word-break: keep-all;
+                    line-height: 1.5;
+                    color: white;
+                  }
+                }
+              }
+              input:checked ~ .hidden_show {
+                height: auto;
+                margin: auto;
+                opacity: 1;
+              }
+              
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -15,10 +15,13 @@
     margin: auto;
     position: relative;
     background-color:black;
-    font-weight: bold;
-    font-size: 1.3em;
-    color: orange;
     text-align: center;
+      a {
+        font-weight: bold;
+        font-size: 1.1em;
+        color: orange;
+        text-decoration: none;
+      }
     .icon {
       height: 80px;
       width: 80px;

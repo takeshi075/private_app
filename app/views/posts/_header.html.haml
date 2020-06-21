@@ -26,12 +26,23 @@
     - else
       = link_to "ログイン", new_user_session_path, class: "header__right--inbtn"
       = link_to "新規登録", new_user_registration_path, class: "header__right--inbtn"
-  .header__contents
-    .header__contents__post
-      = link_to new_post_path do
-        = image_tag "/icon/edit_icon.png",class:"header__contents__post__icon"
-        .header__contents__post__btn 投稿する
-    .header__contents__rm
-      = link_to root_path do
-        = image_tag "/icon/calculate_icon.png",class:"header__contents__rm__icon"
-        .header__contents__rm__btn RM計算
+  - if current_user.try(:id)
+    .header__contents
+      .header__contents__post
+        = link_to new_post_path do
+          = image_tag "/icon/edit_icon.png",class:"header__contents__post__icon"
+          .header__contents__post__btn 投稿する
+      .header__contents__rm
+        = link_to root_path do
+          = image_tag "/icon/calculate_icon.png",class:"header__contents__rm__icon"
+          .header__contents__rm__btn RM計算
+      .header__contents__user
+        = link_to edit_user_registration_path(@user) do
+          = image_tag "/icon/ifn0013.png",class:"header__contents__user__icon"
+          .header__contents__user__btn
+            .header__contents__user__btn__a
+              ユーザー
+            .header__contents__user__btn__b
+              編集 
+  - else 
+    .display-none
