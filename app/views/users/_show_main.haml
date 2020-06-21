@@ -3,13 +3,79 @@
     .box__title
       ユーザー詳細
   .content
-    .content__imageuser
-      .content__image
-        - if @user.image?
-          = image_tag @user.image.url,class:"icon"
-        - else
-          = image_tag "/icon/noimage1.svg",class:"icon"
-      ユーザー名
+    .content__image
+      - if @user.image?
+        = image_tag @user.image.url,class:"icon"
+      - else
+        = image_tag "/icon/noimage1.svg",class:"icon"
+    .content__name
       = @user.name
-    プロフィール
-    = link_to "トップページに戻る", :back
+    .content__introduction
+      .content__introduction__title
+        プロフィール
+      .content__introduction__main
+        = @user.introduction
+  - @posts.each do |post|
+    .usermain
+      .usermain__content
+        .usermain__content__profile
+          .usermain__content__profile__list
+            .usermain__content__profile__list__day
+              = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+              -if post.user_id == current_user.id
+                .postManage
+                  = link_to "削除", "/posts/#{post.id}", method: :delete, class: "postManage__delete"
+        .usermain__content__list
+          .usermain__content__list__text
+            .usermain__content__list__text__title
+              一言メモ
+            .usermain__content__list__text__detail
+              = post.memo
+          .usermain__content__list__menuImage
+            .usermain__content__list__menuImage__menu
+              .usermain__content__list__menuImage__menu__title
+                トレーニングメニュー
+              .usermain__content__list__menuImage__menu__detail
+                .usermain__content__list__menuImage__menu__detail__1
+                  = post.menu1
+                .usermain__content__list__menuImage__menu__detail__1
+                  = post.menu2
+                .usermain__content__list__menuImage__menu__detail__1
+                  = post.menu3
+                .usermain__content__list__menuImage__menu__detail__1
+                  = post.menu4
+                .usermain__content__list__menuImage__menu__detail__1
+                  = post.menu5
+            .usermain__content__list__menuImage__image
+              .usermain__content__list__menuImage__image__title
+                画像
+              .usermain__content__list__menuImage__image__detail
+                = image_tag post.image.url
+          .usermain__content__list__coments
+            .hidden_box
+              %label{:for => "label1"} コメントを見る ( 1.クリック 2.スクロールして確認)
+              %input#label1{:type => "checkbox"}
+              .hidden_show
+                .hidden_show__coments
+                  .hidden_show__coments__profile
+                    = link_to root_path do
+                      .hidden_show__coments__profile__image
+                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                      .hidden_show__coments__profile__name
+                        たけ
+                      .hidden_show__coments__profile__day
+                        2020年6月1日
+                  .hidden_show__coments__box
+                    アイウエオ
+              .hidden_show
+                .hidden_show__coments
+                  .hidden_show__coments__profile
+                    = link_to root_path do
+                      .hidden_show__coments__profile__image
+                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
+                      .hidden_show__coments__profile__name
+                        たけ
+                      .hidden_show__coments__profile__day
+                        2020年6月1日
+                  .hidden_show__coments__box
+                    アイウエオ

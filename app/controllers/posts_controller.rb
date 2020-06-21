@@ -14,7 +14,14 @@ class PostsController < ApplicationController
     else 
       render "new"
     end
-    
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+      if post.user_id == current_user.id
+        post.destroy
+      end
+    redirect_to user_path(current_user)
   end
 
   
