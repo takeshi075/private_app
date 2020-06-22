@@ -32,7 +32,7 @@ Things you may want to cover:
 |password|string|null: false|
 ### Association
 - has_many :posts,dependent: :destroy
-- has_many :comments,dependent: :destroy
+- has_many :coments,dependent: :destroy
 
 
 ## profileテーブル
@@ -54,7 +54,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - has_many :menus
-- has_many :comments
+- has_many :coments
 
 
 ## menusテーブル
@@ -72,7 +72,7 @@ Things you may want to cover:
 - belongs_to :setcount
 
 
-## commentsテーブル
+## comentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
@@ -101,60 +101,8 @@ Things you may want to cover:
 
 
 
-<!-- post -->
-class CreatePosts < ActiveRecord::Migration[5.2]
-  def change
-    create_table :posts do |t|
-      t.text :memo , null: false
-      t.text :menu,null: false
-      t.string :post_image
-      t.references :tag, null: false,foreign_key: true
-      t.references :user, null: false,foreign_key: true
-      t.timestamps
-    end
-  end
-end
-
-<!-- user -->
-class CreateUsers < ActiveRecord::Migration[5.2]
-  def change
-    create_table :users do |t|
-      t.string  :username,null: false
-      t.string  :email,null: false
-      t.string  :password,null: false
-      t.text    :profile
-      t.string  :profile_image
-      t.timestamps
-    end
-  end
-end
-
-<!-- coment -->
-class CreateComments < ActiveRecord::Migration[5.2]
-  def change
-    create_table :comments do |t|
-      t.text :text
-      t.references :user, null: false,foreign_key: true
-      t.references :post, null: false,foreign_key: true
-      t.timestamps
-    end
-  end
-end
-
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :posts_tags_relations
-- has_many :posts,  through:  :posts_tags_relations
 
 
-## post_tag_relationsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|references|null: false, foreign_key: true|
-|tag_id|references|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :tag
+
+
+
