@@ -67,8 +67,3 @@
                         2020年6月1日
                   .hidden_show__coments__box
                     アイウエオ
-          .main__content__list__coments
-            = form_with(model: [@post, @coment], local: true) do |f|
-              = f.text_field :text
-              = f.hidden_field :post_id, value: @post.id
-              = f.submit 'コメントする', class: "btn btn-primary"

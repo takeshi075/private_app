@@ -1,16 +1,13 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show,:new,:create,:destroy]
 
   def index
     @posts = Post.all
-    @coments = @post.coments
-    @coment = Coment.new
+    
   end
 
   def show
     @post = Post.find(params[:id])
-    @coments = @post.coments.build
-    # @coment = Coment.build
   end
 
   def new
@@ -25,6 +22,7 @@ class PostsController < ApplicationController
       render "new"
     end
   end
+  
 
   def destroy
     post = Post.find(params[:id])

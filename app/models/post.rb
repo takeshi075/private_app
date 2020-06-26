@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many :coments
   mount_uploader :image, ImageUploader
 
   validates :memo, presence: true
