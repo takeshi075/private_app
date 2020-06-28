@@ -51,31 +51,4 @@
                 画像
               .usermain__content__list__menuImage__image__detail
                 = image_tag post.image.url
-          .usermain__content__list__coments
-            .hidden_box
-              %label{:for => "label1"} コメントを見る ( 1.クリック 2.スクロールして確認)
-              %input#label1{:type => "checkbox"}
-              .hidden_show
-                .hidden_show__coments
-                  .hidden_show__coments__profile
-                    = link_to root_path do
-                      .hidden_show__coments__profile__image
-                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-                      .hidden_show__coments__profile__name
-                        たけ
-                      .hidden_show__coments__profile__day
-                        2020年6月1日
-                  .hidden_show__coments__box
-                    アイウエオ
-              .hidden_show
-                .hidden_show__coments
-                  .hidden_show__coments__profile
-                    = link_to root_path do
-                      .hidden_show__coments__profile__image
-                        = image_tag "/icon/ニューヨーク.jpg",class:"icon"
-                      .hidden_show__coments__profile__name
-                        たけ
-                      .hidden_show__coments__profile__day
-                        2020年6月1日
-                  .hidden_show__coments__box
-                    アイウエオ
+          
