@@ -1,0 +1,44 @@
+.wrapper {
+  height: 100Vh;
+  width: 100VW;
+  background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+  &__rm {
+    border-top:solid 8px orange;
+    background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+    .box {
+      height: 80px;
+      width: 400px;
+      display: flex;
+      margin: auto;
+      &__title {
+        height: 38px;
+        width: 200px;
+        margin: auto;
+        background-color: black;
+        color: orange;
+        font-weight: bold;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 5px 0px;
+        margin-top: 42px;
+      }
+    }
+    .content {
+      height: 200px;
+      width: 80%;
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      background-color: black;
+      &__introduction {
+        color: white;
+        &__main {
+          height: 185px;
+          margin: 20px;
+          padding-top: 15px;
+          background-color: red;
+        }
+      }
+    }
+  }
+}

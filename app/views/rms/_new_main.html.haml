@@ -1,3 +1,22 @@
+.wrapper__rm
+  .box
+    .box__title
+      RM計算
+  .content
+    .content__introduction
+      .content__introduction__main
+        このページではトレーニングの目的に応じて最適な重さと反復回数を知ることができます。
+        この重さ（負荷）と回数を決めるとき「RM法」を用います。
+        RMとはレペティション・マキシマム【repetition maximum】の略で、頭文字からRMと呼ばれます。
+        ある決まった重さに対して何回反復して関節運動を行うことができるかによって運動強度（重さ）を決める方法です。
+        1回が限界の負荷を1RM、最高５回繰り返せる負荷を５RMというように表します。
+
+        高負荷（１RM～３RM）は、神経系の改善や筋力アップが期待できます。
+        中程度の負荷（４RM～１２RM）は、筋力アップや筋肥大が期待できます。
+        低負荷（1２RM以上)は、筋持久力（繰り返し反復できる力）アップが期待できます。
+
+        以下の計算機は任意のトレーニングにおける最大重量を求めることができます。
+        
 = form_with model: @rm, local: true,class:"form" do |f|
   = f.number_field :use_weight,placeholder:" 使用重量 "
   = f.number_field :reps,placeholder:" 最大回数 "  
