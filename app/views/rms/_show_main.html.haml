@@ -1,1 +1,3 @@
-%p #{(@rm.reps / 40) + 1 * @rm.use_weight .to_f}
+- a = @rm.reps / 40.0
+- b = a + 1
+%p #{b * @rm.use_weight}
