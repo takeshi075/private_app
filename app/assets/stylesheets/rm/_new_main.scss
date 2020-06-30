@@ -24,19 +24,67 @@
       }
     }
     .content {
-      height: 200px;
-      width: 80%;
+      height: 330px;
+      width: 90%;
       margin: auto;
       margin-top: 15px;
-      margin-bottom: 30px;
       background-color: black;
       &__introduction {
         color: white;
-        &__main {
-          height: 185px;
-          margin: 20px;
-          padding-top: 15px;
+        &__a {
+          height: 142px;
+          margin-left: 20px;
+          margin-right: 20px;
+          white-space: pre;
+        }
+        &__b {
+          height: 100px;
+          margin-left: 20px;
+          margin-right: 20px;
+          white-space: pre;
+        }
+        &__c {
+          height: 70px;
+          margin-left: 20px;
+          margin-right: 20px;
+          white-space: pre;
+        }
+      }
+    }
+    .list {
+      height: 700px;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 30px;
+      border-bottom: solid 1px gray;
+      background-color: black;
+      &__box {
+        height: 400px;
+        width: 90%;
+        display: flex;
+        margin: auto;
+        padding-top: 28px;
+
+        &__strong {
+          width: 33%;
           background-color: red;
+          &__1 {
+            height: 60px;
+            border: solid 1px gray;
+          }
+          p {
+            height: 40px;
+            border: solid 1px gray;
+            background-color: yellow;
+          }
+        }
+        &__rm {
+          width: 33%;
+          background-color:blue;
+        }
+        &__effect {
+          width: 33%;
+          background-color:green;
         }
       }
     }
