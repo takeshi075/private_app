@@ -3,6 +3,7 @@
   width: 100VW;
   background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
   &__rm {
+    height: 1200px;
     border-top:solid 8px orange;
     background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
     .box {
@@ -52,40 +53,107 @@
       }
     }
     .list {
-      height: 700px;
+      height: 650px;
       width: 90%;
       margin: auto;
-      margin-bottom: 30px;
+      padding-top: 10px;
       border-bottom: solid 1px gray;
       background-color: black;
+      display: flex;
       &__box {
-        height: 400px;
-        width: 90%;
+        height: 568px;
+        width: 60%;
         display: flex;
         margin: auto;
-        padding-top: 28px;
+        background-color: white;
 
         &__strong {
           width: 33%;
-          background-color: red;
+          background-color: white;
+          color:black;
           &__1 {
-            height: 60px;
+            height: 78px;
+            text-align: center;
             border: solid 1px gray;
+            white-space: pre;
+            background: rgb(240, 176, 56);
           }
           p {
-            height: 40px;
+            height: 35px;
+            text-align: center;
             border: solid 1px gray;
-            background-color: yellow;
+            &:nth-child(even) {
+              background: #e2e0e0;
+            }
           }
+          
         }
         &__rm {
           width: 33%;
-          background-color:blue;
+          background-color: white;
+          color: black;
+          &__1 {
+            height: 78px;
+            text-align: center;
+            border: solid 1px gray;
+            white-space: pre;
+            background: rgb(240, 176, 56);
+          }
+          p {
+            height: 35px;
+            text-align: center;
+            border: solid 1px gray;
+            &:nth-child(even) {
+              background: #e2e0e0;
+            }
+          }
         }
         &__effect {
-          width: 33%;
-          background-color:green;
+          width: 34%;
+          &__1 {
+            height: 78px;
+            text-align: center;
+            border: solid 1px gray;
+            white-space: pre;
+            background: rgb(240, 176, 56);
+          }
+          &__2 {
+            height: 105px;
+            text-align: center;
+            border: solid 1px gray;
+            white-space: pre;
+            background: #e2e0e0;
+          }
+          &__3 {
+            height: 35px;
+            text-align: center;
+            border: solid 1px gray;
+          }
+          &__4 {
+            height: 175px;
+            text-align: center;
+            border: solid 1px gray;
+            white-space: pre;
+            background: #e2e0e0;
+          }
+          &__5 {
+            height: 35px;
+            text-align: center;
+            border: solid 1px gray;
+          }
+          &__6 {
+            height: 140px;
+            text-align: center;
+            border: solid 1px gray;
+            white-space: pre;
+            background: #e2e0e0;
+          }
         }
+      }
+      &__calcu {
+        width: 20%;
+        margin-top: 20px;
+        margin-right: 35px;
       }
     }
   }
