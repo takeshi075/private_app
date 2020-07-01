@@ -15,31 +15,88 @@
         中程度の負荷（４RM～１２RM）は、筋力アップや筋肥大が期待できます。
         低負荷（1２RM以上)は、筋持久力（繰り返し反復できる力）アップが期待できます。
       .content__introduction__c
-        以下の計算機は任意のトレーニングにおける最大重量を求めることができます。
+        右記に記載の計算機は任意のトレーニングにおける最大重量を求めることができます。
         ご活用ください。
   .list
     .list__box
       .list__box__strong
         .list__box__strong__1
+          強度（％）
+          （最大筋力に対する割合）
         %p.list__box__strong__2
+          100
         %p.list__box__strong__3
+          95
         %p.list__box__strong__4
+          93
         %p.list__box__strong__5
+          90
         %p.list__box__strong__6
+          87
         %p.list__box__strong__7
+          85
         %p.list__box__strong__8
+          80
         %p.list__box__strong__9
+          77
         %p.list__box__strong__10
+          75
         %p.list__box__strong__11
+          70
         %p.list__box__strong__12
+          67
         %p.list__box__strong__13
+          65
         %p.list__box__strong__14
+          60
         %p.list__box__strong__15
+          50
       .list__box__rm
         .list__box__rm__1
-        .list__box__rm__2
+          RM（最大反復回数）
+        %p.list__box__rm__2
+          1
+        %p.list__box__rm__3
+          2
+        %p.list__box__rm__4
+          3
+        %p.list__box__rm__5
+          4
+        %p.list__box__rm__6
+          5
+        %p.list__box__rm__7
+          6
+        %p.list__box__rm__8
+          8
+        %p.list__box__rm__9
+          9
+        %p.list__box__rm__10
+          10 〜 12
+        %p.list__box__rm__11
+          12 〜 15
+        %p.list__box__rm__12
+          15 〜 18
+        %p.list__box__rm__13
+          18 〜 20
+        %p.list__box__rm__14
+          20 〜 25
+        %p.list__box__rm__15
+          30 〜 
       .list__box__effect
-= form_with model: @rm, local: true,class:"form" do |f|
-  = f.number_field :use_weight,placeholder:" 使用重量 "
-  = f.number_field :reps,placeholder:" 最大回数 "  
-  = f.submit '計算する' 
+        .list__box__effect__1
+          期待できる主な効果
+        .list__box__effect__2
+          集中力（神経系）・筋力
+        .list__box__effect__3
+          集中力・筋肥大・筋力
+        .list__box__effect__4
+          筋肥大・筋力
+        .list__box__effect__5
+          筋肥大・筋力・筋持久力
+        .list__box__effect__6
+          筋持久力
+    .list__calcu
+      = form_with model: @rm, local: true,class:"form" do |f|
+        = f.number_field :use_weight,placeholder:" 使用重量 "
+        = f.number_field :reps,placeholder:" 最大回数 "  
+        = f.submit '計算する' 
