@@ -1,3 +1,8 @@
-- a = @rm.reps / 40.0
-- b = a + 1
-%p #{b * @rm.use_weight}
+.result
+  .result__main
+    .result__main__title
+      最大重量
+    .result__main__box
+      - a = @rm.reps / 40.0
+      - b = a + 1
+      %p #{b * @rm.use_weight} kg
