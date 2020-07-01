@@ -1,0 +1,27 @@
+.result {
+  border-top:solid 8px orange;
+  background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+  &__main {
+    height: 250px;
+    width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    &__title {
+      height: 100px;
+      width: 200px;
+      margin: auto;
+      margin-top: 10px;
+      font-size: xxx-large;
+      color: white;
+    }
+    &__box {
+      height: 100px;
+      width: 200px;
+      margin: auto;
+      margin-top: 10px;
+      font-size: xxx-large;
+      color: orange;
+    }
+  }
+}
