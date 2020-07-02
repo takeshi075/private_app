@@ -41,37 +41,37 @@
         }
       }
     
-      &__serch {
-        height: 50px;
-        width: 100vw;
-        display: flex;
-        &__box {
-          height: 36px;
-          margin: auto;
-          display: flex;
-          padding-top: 20px;
-          &__fream {
-            .login-input-text {
-              height: 38px;
-              width: 500px;
-              position: absolute;
-              left: 400px;
-            }
-          }
-          &__icon {
-            height: 38px;
-            width: 36px;
-            background-color: orange;
-            position: absolute;
-            left: 902px;
-            .icon {
-              height: 26px;
-              width: 26px;
-              margin: 7px 7px;
-            }
-          }
-        }
-      }
+      // &__serch {
+      //   height: 50px;
+      //   width: 100vw;
+      //   display: flex;
+      //   &__box {
+      //     height: 36px;
+      //     margin: auto;
+      //     display: flex;
+      //     padding-top: 20px;
+      //     &__fream {
+      //       .login-input-text {
+      //         height: 38px;
+      //         width: 500px;
+      //         position: absolute;
+      //         left: 400px;
+      //       }
+      //     }
+      //     &__icon {
+      //       height: 38px;
+      //       width: 36px;
+      //       background-color: orange;
+      //       position: absolute;
+      //       left: 902px;
+      //       .icon {
+      //         height: 26px;
+      //         width: 26px;
+      //         margin: 7px 7px;
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     &__profile {

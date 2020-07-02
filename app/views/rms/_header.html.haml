@@ -5,12 +5,12 @@
         = link_to root_path do
           トレーニング投稿
           = image_tag "/icon/マッチョ.png",class:"icon"
-    .header__top__serch
-      .header__top__serch__box
-        .header__top__serch__box__fream
-          %input.login-input-text{ :placeholder => "キーワードから投稿を探す", :value => ""}/
-        .header__top__serch__box__icon
-          =image_tag "/icon/icon-search 1.png",class:"icon"
+    -# .header__top__serch
+    -#   .header__top__serch__box
+    -#     .header__top__serch__box__fream
+    -#       %input.login-input-text{ :placeholder => "キーワードから投稿を探す", :value => ""}/
+    -#     .header__top__serch__box__icon
+    -#       =image_tag "/icon/icon-search 1.png",class:"icon"
   .header__profile
     - if user_signed_in?
       .header__profile__box
