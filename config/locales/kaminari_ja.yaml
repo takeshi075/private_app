@@ -1,21 +1,4 @@
 ja:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            name:
-              blank: "ニックネームを入力して下さい"
-    models: 
-      user: "ユーザー"
-    attributes:
-      user:
-        name: "ニックネーム"
-      post: 投稿
-        attributes:
-          post:
-            memo: 一言メモ
-            menu1: トレーニングメニュー①
   views:
     pagination:
       first: "&laquo; 最初"
