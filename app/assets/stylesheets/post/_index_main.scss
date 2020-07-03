@@ -147,4 +147,94 @@
       }
     }
   }
+  .pagination {
+    padding: 45px 150px;
+    width: 100%;
+    text-align: center;
+    background-image: url(/back_image/コンクリート打ちっぱなし2.jpeg);
+    span {
+      a:hover {
+        color: orange;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .page.current {
+      background-color: rgb(131, 127, 127);
+      border-color: rgb(131, 127, 127);
+      
+    }
+    .page {
+      background-color:black;
+      border-bottom: 2px solid black;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity .2s;
+      padding: 7px 15px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      font-size: 1em;  
+    }
+    .first {
+      background-color:black;
+      border-bottom: 2px solid black;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity .2s;
+      padding: 7px 15px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      font-size: 1em;
+    }
+    .prev {
+      background-color:black;
+      border-bottom: 2px solid black;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity .2s;
+      padding: 7px 15px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      font-size: 1em;
+    }
+    .next {
+      background-color:black;
+      border-bottom: 2px solid black;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity .2s;
+      padding: 7px 15px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      font-size: 1em;
+    }
+    .last {
+      background-color:black;
+      border-bottom: 2px solid black;
+      border-radius: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      transition: opacity .2s;
+      padding: 7px 15px;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      font-size: 1em;
+    }
+  }
 }
