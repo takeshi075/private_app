@@ -28,7 +28,12 @@ https://bloc-chesterfield-74015.herokuapp.com/
 例えば、パーソナルトレーナーであれば、プロフィールと写真を登録し、説明とリンクを貼るなどすれば顧客を誘導することができます。<br>
 
 ## DEMO
-<img width="1440" alt="スクリーンショット 2020-07-06 12 29 23" src="https://user-images.githubusercontent.com/63388041/86553286-448f0280-bf85-11ea-992f-44ca26b26ad0.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 29 41" src="https://user-images.githubusercontent.com/63388041/86553388-933c9c80-bf85-11ea-8048-651dc90c9536.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 29 55" src="https://user-images.githubusercontent.com/63388041/86553402-9c2d6e00-bf85-11ea-8170-6b5fa40436ce.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 30 05" src="https://user-images.githubusercontent.com/63388041/86553411-a3547c00-bf85-11ea-81b3-9e751e03be26.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 30 27" src="https://user-images.githubusercontent.com/63388041/86553427-b10a0180-bf85-11ea-923d-90a8367743ef.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 30 39" src="https://user-images.githubusercontent.com/63388041/86553432-b49d8880-bf85-11ea-9ecf-f6f14b71ab0d.png">
+
 
 ## 工夫したポイント
 
