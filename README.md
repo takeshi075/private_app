@@ -1,7 +1,7 @@
-# アプリ名
+## アプリ名
 トレーニング投稿
 
-# 概要
+## 概要
 * 日々のトレーニングを投稿できます。<br>
 一言メモ、トレーニングメニュー5種類、写真
 
@@ -49,6 +49,10 @@ https://bloc-chesterfield-74015.herokuapp.com/
 ## 工夫したポイント
 
 ## 使用技術(開発環境)
+MacBook Pro 13<br>
+macOs 10.15.4<br>
+rails 5.2.3<br>
+PostgreSQL. Versions 9.1<br>
 
 ## 課題や今後実装したい機能
 
