@@ -28,11 +28,22 @@ https://bloc-chesterfield-74015.herokuapp.com/
 例えば、パーソナルトレーナーであれば、プロフィールと写真を登録し、説明とリンクを貼るなどすれば顧客を誘導することができます。<br>
 
 ## DEMO
+* トップページ<br>
 <img width="1436" alt="スクリーンショット 2020-07-06 12 29 41" src="https://user-images.githubusercontent.com/63388041/86553388-933c9c80-bf85-11ea-8048-651dc90c9536.png">
-<img width="1436" alt="スクリーンショット 2020-07-06 12 29 55" src="https://user-images.githubusercontent.com/63388041/86553402-9c2d6e00-bf85-11ea-8170-6b5fa40436ce.png">
 <img width="1436" alt="スクリーンショット 2020-07-06 12 30 05" src="https://user-images.githubusercontent.com/63388041/86553411-a3547c00-bf85-11ea-81b3-9e751e03be26.png">
 <img width="1436" alt="スクリーンショット 2020-07-06 12 30 27" src="https://user-images.githubusercontent.com/63388041/86553427-b10a0180-bf85-11ea-923d-90a8367743ef.png">
-<img width="1436" alt="スクリーンショット 2020-07-06 12 30 39" src="https://user-images.githubusercontent.com/63388041/86553432-b49d8880-bf85-11ea-9ecf-f6f14b71ab0d.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 30 39" src="https://user-images.githubusercontent.com/63388041/86553432-b49d8880-bf85-11ea-9ecf-f6f14b71ab0d.png">  
+
+* ユーザーページ<br>
+<img width="1436" alt="スクリーンショット 2020-07-06 12 49 18" src="https://user-images.githubusercontent.com/63388041/86553980-4bb71000-bf87-11ea-9b4f-b56fe0764846.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 49 58" src="https://user-images.githubusercontent.com/63388041/86553983-4ce83d00-bf87-11ea-8bc9-d8e76012739d.png">
+
+* RM計算ページ<br>
+<img width="1436" alt="スクリーンショット 2020-07-06 12 52 12" src="https://user-images.githubusercontent.com/63388041/86554211-f0395200-bf87-11ea-8056-533cd950cf77.png">
+<img width="1436" alt="スクリーンショット 2020-07-06 12 52 33" src="https://user-images.githubusercontent.com/63388041/86554220-f3ccd900-bf87-11ea-88d8-8721a13235c4.png">
+
+* RM計算結果ページ<br>
+<img width="1436" alt="スクリーンショット 2020-07-06 12 56 14" src="https://user-images.githubusercontent.com/63388041/86554296-2f67a300-bf88-11ea-9606-78166c6ae942.png">
 
 
 ## 工夫したポイント
