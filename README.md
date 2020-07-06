@@ -2,13 +2,13 @@
 トレーニング投稿
 
 # 概要
-* 日々のトレーニングを投稿できます。  
+* 日々のトレーニングを投稿できます。<br>  
   一言メモ、トレーニングメニュー5種類、写真
 
 * ユーザーのプロフィール、写真を登録できます。
 
 * RM計算機能
-  トレーニングの目的に応じて最適な重さと反復回数を知ることができます。
+  トレーニングの目的に応じて最適な重さと反復回数を知ることができます。<br>
   それに伴い、最大重量を自動計算出来ます。　
 　
 　
@@ -22,14 +22,12 @@
 
 
 ## 制作背景
-  ユーザーがモチベーションを維持することに役立つと考えたからです。
-　トレーニングは孤独な作業です。
-　1人ではモチベーションを保つことは難しいですが、他ユーザーのトレーニングの投稿を確認し切磋琢磨できる環　境が出来ます。
-　
-　又、ビジネスにもご活用して頂けます。
-  例えば、パーソナルトレーナーであれば、プロフィールと写真を登録し、説明とリンクを貼るなどすれば顧客を誘導することができます。
-
-　
+ユーザーがモチベーションを維持することに役立つと考えたからです。<br>
+トレーニングは孤独な作業です。1人ではモチベーションを保つことは難しいですが、他ユーザーのトレーニングの投稿を確認し切磋琢磨できる環境が出来ます。<br>　
+又、ビジネスにもご活用して頂けます。<br>
+例えば、パーソナルトレーナーであれば、プロフィールと写真を登録し、説明とリンクを貼るなどすれば顧客を誘導することができます。<br>
+<br>
+<br>
 ・DEMO(gifで動画や写真を貼って、ビューのイメージを掴んでもらいます)
 　
 ・工夫したポイント
@@ -44,59 +42,37 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|introduction|text||
+|image|string||
 |email|string|null: false|
 |password|string|null: false|
 ### Association
 - has_many :posts,dependent: :destroy
-- has_many :coments,dependent: :destroy
-
-
-## profileテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|introduction||
-|image|string|
-|user_id|references|null: false, foreign_key: true|
-### Association
-- belongs_to :user
 
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |memo|text|null: false|
+|menu1|text||
+|menu2|text||
+|menu3|text||
+|menu4|text||
+|menu5|text||
 |image|string|
 |user_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :menus
-- has_many :coments
 
 
-## menusテーブル
+## rmsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|menu|string|null: false|
-|weight_id|string|null: false|
-|repetition_id|string|null: false|
-|setcount_id|string|null: false|
-|post_id|string|null: false|
-### Association
-- belongs_to :post
-- belongs_to :repetition
-- belongs_to :weight
-- belongs_to :setcount
-
-
-## comentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|post_id|references|null: false, foreign_key: true|
+|use_weight|integer||
+|reps|integer||
 |user_id|references|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
-- belongs_to :user
+- has_many :users
 
 
 
